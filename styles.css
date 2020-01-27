@@ -1,0 +1,822 @@
+/***********************
+**     Normalize      **
+***********************/
+
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+.clearfix:after {visibility: hidden; display: block; font-size: 0; content: ''; clear: both; height: 0; }
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+/***********************
+**   General Styles   **
+***********************/
+
+:root {
+    /* Variables */
+
+    /* Fonts */
+    --font-play: 'Playfair Display', serif;
+    --font-lato: 'Lato', sans-serif;
+
+    /* Colour Palette */
+    --col-accent: #E7A8E6;
+    --col-black: #000000;
+    --col-black-two: #232323;
+    --col-black-shade: #1F2022;
+    --col-grey: #D8D8D8;
+    --col-pale-grey: #F0F5FF;
+    --col-white: #FCFCFC;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: var(--font-lato);
+    font-size: 1.8rem;
+    font-weight: 400;
+    background-color: var(--col-white);
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    font-weight: 700;
+}
+
+a {
+    color: var(--col-white);
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.2s;
+}
+
+a:hover,
+a:focus {
+    color: var(--col-accent);
+    text-shadow: 1px 1px var(--col-black);
+}
+
+h1 {
+    margin: 1% 0 0 0;
+    font-family: var(--font-play);
+    font-size: 12rem;
+    text-align: center;
+    line-height: 6.3rem;
+}
+
+img {
+    width: 100%;
+    max-height: 100%;
+    height: auto;
+    display: block;
+}
+
+.wrapper {
+    max-width: 1280px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+/***********************
+**   Header Styles    **
+***********************/
+
+header {
+    height: 100vh;
+    background-image: url('./assets/asset-1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: var(--col-white);
+    padding: 1% 0 5% 0;
+}
+
+header p {
+    margin: 0;
+    padding-top: 65vh;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 2.5rem;
+}
+
+.top-nav li {
+    float: left;
+    margin: 0 20px;
+}
+
+.top-nav a {
+    float: left;
+}
+
+.top-nav-ul {
+    float: right;
+    margin: 1.5% 0;
+}
+
+.logo {
+    font-family: var(--font-play);
+    font-size: 4.2rem;
+    text-transform: capitalize;
+}
+
+.hamburger {
+    display: none;
+}
+
+.social-media-nav {
+    float: right;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
+.social-media-nav li {
+    margin: 75% 0;
+}
+
+/***********************
+**   Section Styles   **
+***********************/
+
+section {
+    padding: 5% 0;
+}
+
+section:last-of-type {
+    padding: 0;
+}
+
+section:first-of-type {
+    background-color: var(--col-pale-grey);
+}
+
+section p {
+    line-height: 1.5;
+}
+
+.button {
+    display: block;
+    margin: 2% auto;
+    font-weight: 700;
+    font-size: 1.8rem;
+    background-color: var(--col-accent);
+    border-style: none;
+    text-transform: uppercase;
+    padding: 15px 30px;
+    transition: all 0.2s;
+}
+
+.button:hover,
+.button:focus {
+    background-color: var(--col-black);
+    color: var(--col-accent);
+}
+
+/*************************
+** About Section Styles **
+*************************/
+
+h2 {
+    margin: 2% 0;
+    font-size: 4rem;
+    text-align: center;
+    font-family: var(--font-play);
+}
+
+.about p {
+    text-align: center;
+    width: 60%;
+    margin: 2% auto;
+}
+
+/***************************
+** Gallery Section Styles **
+***************************/
+
+.gallery li {
+    float: left;
+    width: calc((100% - 7%) / 3);
+}
+
+.gallery li:nth-last-of-type(2) {
+    margin: 0 3.5%;
+}
+
+.gallery img {
+    width: 100%;
+}
+
+/*******************************
+** Mid-page Navigation Styles **
+*******************************/
+
+.mid-nav {
+    background-image: url('./assets/asset-5.jpg');
+    background-position: center;
+    background-size: cover;
+    color: var(--col-white);
+    font-family: var(--font-play);
+}
+
+.mid-nav nav {
+    width: 80%;
+    margin: 0 auto;
+    padding: 2% 0;
+}
+
+.mid-nav li {
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+.mid-nav i {
+    font-size: 4rem;
+}
+
+.mid-nav h3 {
+    margin: 0;
+    font-size: 3rem;
+    padding: 10% 0;
+    text-transform: capitalize;
+}
+
+
+/*************************
+**  Blog Section Styles **
+*************************/
+
+article {
+    line-height: 1.5;
+}
+
+h4 {
+    font-family: var(--font-play);
+    font-size: 4rem;
+    margin: 0;
+}
+
+article .button {
+    margin: 0;
+}
+
+.img-container {
+    float: left;
+    width: 25%;
+    margin-right: 3.5%;
+}
+
+.content-container {
+    float: left;
+    width: 71.5%;
+}
+
+.blog .content-container {
+    transform: translateY(-2.5%);
+}
+
+/******************************
+** Photo-tips Section Styles **
+*******************************/
+
+h5 {
+    font-family: var(--font-play);
+    font-size: 3rem;
+    margin: 0;
+}
+
+.photo-tips button {
+    float: left;
+}
+
+.card {
+    background-color: var(--col-pale-grey);
+    padding: 0;
+}
+
+.card .img-container {
+    width: 50%;
+    float: right;
+    margin: 0;
+}
+
+.card:nth-of-type(even) .img-container {
+    float: left;
+}
+
+.card .content-container {
+    width: 50%;
+    float: left;
+    text-align: right;
+    padding-top: 7%;
+    padding-right: 7%;
+    transform: translateY(-3.5%);
+}
+
+.card:nth-of-type(even) .content-container {
+    float: right;
+    text-align: left;
+    padding-right: 0;
+    padding-left: 7%;
+}
+
+.card p {
+    width: 50%;
+    float: right;
+}
+
+.card:nth-of-type(even) p {
+    float: left;
+}
+
+.card button {
+    clear: both;
+    float: right;
+}
+
+.card:nth-of-type(even) button {
+    float: left;
+}
+
+/**********************
+**   Footer Styles   **
+***********************/
+
+footer {
+    background-color: var(--col-black-shade);
+    color: var(--col-white);
+}
+
+footer li {
+    font-weight: 400;
+}
+
+footer p {
+    margin: 0;
+}
+
+h6 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.footer-container {
+    padding: 7% 0;
+}
+
+.footer-container > *{
+    float: left;
+}
+
+/******************************
+**   Footer Contact Styles   **
+******************************/
+
+.footer-contact {
+    width: 25%;
+}
+
+.footer-contact p {
+    line-height: 1.75;
+    font-style: normal;
+}
+
+/***************************************
+**   Footer Subscribe (form) Styles   **
+***************************************/
+
+.footer-subscribe {
+    width: 50%;
+    text-align: center;
+}
+
+.footer-subscribe p {
+    margin: 1rem 0;
+}
+
+input {
+    margin: 2% 0;
+    width: 70%;
+    float: left;
+    font-size: 1.75rem;
+    padding: 15px 30px;
+    border: none;
+}
+
+form button {
+    float: left;
+    width: 30%;
+}
+
+/**************************
+**   Footer Nav Styles   **
+***************************/
+
+.footer-nav {
+    width: 25%;
+    text-align: right;
+}
+
+.footer-nav li {
+    line-height: 1.75;
+}
+
+/********************************
+**   Footer Copyright Styles   **
+********************************/
+
+.footer-copyright {
+    background-color: var(--col-black);
+    color: var(--col-grey);
+    text-align: center;
+    padding: 1rem 0 5rem 0;
+}
+
+.footer-copyright p {
+    margin: 0;
+}
+
+
+/**********************
+**   Media Queries   **
+***********************/
+
+
+@media (max-width: 1350px) {
+
+    form .button {
+        padding: 15px 25px;
+    }
+}
+
+@media (max-width: 1225px) {
+    .card p {
+        width: 75%;
+        line-height: 1.25;
+    }
+
+    form .button {
+        padding: 16.5px 25px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 1070px) {
+
+    .card .content-container{
+        padding-top: 5%;
+        transform: translateY(-5%);
+    }
+
+    .card .button {
+        font-size: 1.5rem;
+    }
+
+    form .button {
+        padding: 16.5px 20px;
+    }
+}
+
+/***************************
+**   Mobile Site Begins   **
+****************************/
+
+@media (max-width: 960px) {
+
+    /***********************
+    **   Generic Styles   **
+    ***********************/
+
+    .wrapper {
+        width: 90%;
+    }
+
+    /***********************
+    **   Header Styles    **
+    ***********************/
+
+    header p {
+        padding-top: 35vh;
+    }
+    
+    .top-nav li {
+        float: none;
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .top-nav a {
+        margin: 10% 0;
+        width: 100%;
+        text-align: center;
+        font-size: 5rem;
+    }
+
+    .top-nav .logo {
+        float: none;
+    }
+
+    /***********************************
+    **   Drop-down Nav Menu Styles    **
+    ***********************************/
+
+    .hamburger {
+        font-size: 5rem;
+        background-color: transparent;
+        border: none;
+        color: var(--col-white);
+        display: block;
+        position: fixed;
+        top: 1%;
+        right: 5%;
+        z-index: 10;
+        /* Text shadow added so that hamburger icon would still be visible against the light backgrounds when the user scrolls down the page */
+        text-shadow: 1px 1px var(--col-black);
+    }
+
+    .top-nav-ul {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.9);
+        float: none;
+        height: 0;
+        margin: 0;
+        padding: 25% 0;
+        overflow: hidden;
+        transition: all 0.3s;
+    }
+
+    .social-media-nav {
+        position: fixed;
+        right: inherit;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        height: 0;
+        overflow: hidden;
+    }
+
+    .social-media-nav li {
+        display: inline-block;
+        margin: 0 25px;
+    }
+    
+    .social-media-nav a {
+        font-size: 4rem;
+    }
+
+    .open {
+        top: 0;
+        height: 100%;
+        z-index: 10;
+    }
+
+    /* The following style change is intentionally placed after the .open class (and not with the previous .social-media-nav style changes) so that the TOP property can be overwritten allowing me to use a single .open class for both the .top-nav and the .social-media-nav despite them requiring slightly different accommodations */
+    .social-media-nav {
+        top: 90%;
+    }
+
+    /***********************
+    **   About Styles     **
+    ***********************/
+
+    .about p {
+        width: 90%;
+        margin: 10% auto;
+    }
+
+    /************************
+    **   Gallery Styles    **
+    ************************/
+
+    .gallery {
+        padding: 0;
+    }
+
+    .gallery .wrapper {
+        width: 100%;
+    }
+
+    .gallery li {
+        width: 50%;
+    }
+
+    .gallery li:nth-last-of-type(2) {
+        margin: 0;
+    }
+
+    .gallery li:last-of-type {
+        display: none;
+    }
+
+    /************************************
+    **   Mid-page Navigation Styles    **
+    *************************************/
+
+    .mid-nav {
+        background-image: none;
+        background-color: var(--col-black-two);
+    }
+
+    .mid-nav li {
+        float: none;
+        width: 100%;
+        margin: 10% 0;
+    }
+    
+    .mid-nav li:first-of-type {
+        margin-top: 0;
+    }
+
+    .mid-nav li:last-of-type {
+        margin-bottom: 0;
+    }
+
+    .mid-nav h3 {
+        padding: 3% 0 0 0;
+    }
+
+    /************************
+    **   Section Styles    **
+    ************************/
+
+    h4 {
+        text-align: center;
+    }
+
+    article .button {
+        margin: 5% auto;
+    }
+
+    .img-container {
+        float: none;
+        width: 90%;
+        margin: 5% auto;
+    }
+
+    .content-container {
+        float: none;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    /***********************************
+    **   Photo-Tips Section Styles    **
+    ***********************************/
+
+    .card p {
+        float: none;
+        line-height: 1.5;
+        margin: 5% auto;
+    }
+
+    .card button {
+        float: none;
+    }
+
+    .card .img-container {
+        float: none;
+        width: 100%;
+    }
+
+    .card:nth-of-type(even) .img-container {
+        float: none;
+    }
+
+    .card .content-container {
+        float: none;
+        padding: 10% 0;
+        text-align: center;
+        transform: none;
+    }
+
+    .card:nth-of-type(even) .content-container {
+        float: none;
+        text-align: center;
+        padding: 10% 0;
+    }
+
+    .card:nth-of-type(even) p {
+        float: none;
+    }
+
+    .card:nth-of-type(even) button {
+        float: none;
+    }
+
+    /**********************
+    **   Footer Styles   **
+    ***********************/
+
+    .footer-container {
+        position: relative;
+    }
+
+    .footer-contact {
+        width: 50%;
+        text-align: center;
+        position: absolute;
+        bottom: 0;
+        padding-bottom: 7%;
+    }
+    
+    .footer-subscribe {
+        float: none;
+        width: 100%;
+        margin-bottom: 2.5%;
+    }
+
+    input {
+        float: none;
+        width: 100%;
+        text-align: center;
+    }
+
+    form .button {
+        width: 100%;
+        margin-top: 0;
+        font-size: 1.8rem;
+    }
+    
+    .footer-nav {
+        float: right;
+        width: 50%;
+        text-align: center;
+    }
+}
+
+@media (max-width: 660px) {
+
+    .top-nav a {
+        font-size: 4rem;
+    }
+
+    .social-media-nav a {
+        font-size: 3rem;
+    }
+
+    .card p {
+        width: 100%;
+    }
+}
+
+@media (max-width: 490px) {
+
+    h1 {
+        font-size: 10rem;
+    }
+
+    .card .content-container {
+        width: 75%;
+    }
+
+    .footer-container {
+        padding: 12% 0;
+    }
+
+    .footer-subscribe {
+        margin-bottom: 7%;
+    }
+
+    .footer-contact {
+        padding-bottom: 12%;
+    }
+}
+
+@media (max-width: 375px) {
+
+    h1 {
+        font-size: 8.5rem;
+    }
+
+    header p {
+        font-size: 2rem;
+    }
+
+    .top-nav a {
+        font-size: 3rem;
+    }
+
+    .hamburger {
+        font-size: 4rem;
+    }
+
+    h4 {
+        font-size: 3.5rem;
+    }
+
+}
